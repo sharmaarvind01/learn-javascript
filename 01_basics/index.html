@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video carousel</title>
+    <style>
+        .video-carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        }
+
+        .video-slide {
+        flex: 0 0 560px; /* Adjust width as needed */
+        margin-right: 10px; /* Add spacing between video slides */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-carousel">
+        <div class="video-slide">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-slide">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- Add more video slides as needed -->
+      </div>
+      <script>
+        const carousel = document.querySelector('.video-carousel');
+        const slides = document.querySelectorAll('.video-slide');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+        }
+
+        function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+        }
+
+        // Add event listeners for next and previous buttons
+        document.querySelector('#next-btn').addEventListener('click', nextSlide);
+        document.querySelector('#prev-btn').addEventListener('click', prevSlide);
+
+      </script>
+</body>
+</html>

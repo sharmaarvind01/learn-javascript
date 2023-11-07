@@ -17,3 +17,10 @@ let state
 
 console.log(typeof undefined) // undefined
 console.log(typeof null) // Object
+
+const likebutton = document.getElementsByClassName("pld-like-trigger")
+const whatsappbtn = document.createElement('a')
+whatsappbtn.setAttribute('href', 'https://wa.me/9158044677')
+whatsappbtn.classList = "elementor-icon elementor-animation-bounce-in"
+whatsappbtn.innerHTML =  '<i aria-hidden="true" class="fab fa-whatsapp"></i>'
+likebutton.insertAdjacentElement('afterend', whatsappbtn)
