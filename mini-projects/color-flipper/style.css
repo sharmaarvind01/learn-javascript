@@ -12,16 +12,23 @@ Color flipper CSS
     justify-content: center;
     text-align: center;
     vertical-align: middle;
-    height: 100vh;
+    height: calc(100vh - 70px);
     padding: 50px;
+}
+.message-box{
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    width: 50vw;
+    margin: auto;
+    padding: 20px 50px;
+    margin-bottom: 20px;
 }
 
 h2{
     text-align: center;
-    color: #3a3a3a;
+    color: #ffffff;
     font-size: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 50px;
 }
 
 button{
@@ -31,4 +38,34 @@ button{
     font-weight: 700;
     border-radius: 5px;
     border: 3px solid black;
+}
+header {
+    background-color: #fff;
+}
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: 70px;
+}
+ul.menu {
+    display: flex;
+    list-style-type: none;
+    column-gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu-item{
+    font-weight: 600;
+}
+.menu-item a{
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size: 1.2rem;
+}
+.navbar .title{
+    color: #3a3a3a;
 }

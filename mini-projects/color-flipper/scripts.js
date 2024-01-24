@@ -4,7 +4,7 @@
 
 const body = document.body;
 const button = document.querySelector('.color-button');
-body.style.backgroundColor = "red";
+// body.style.backgroundColor = "red";
 const displayName = document.querySelector('#color-name');  
 const colorNames = [
     "aliceblue", "antiquewhite", "aqua", "aquamarine", "azure", "beige", "bisque", "black", "blanchedalmond",
@@ -26,15 +26,36 @@ const colorNames = [
   ];
 
   // change color on button click
+if(button != null){
+    button.addEventListener('click',(e)=>{
+        e.preventDefault;
+        let rand = Math.floor(Math.random()*141);
+        displayName.textContent = colorNames[rand].toUpperCase();
+        displayName.style.color = colorNames[Math.floor(Math.random()*141)];
+        body.style.backgroundColor = colorNames[rand];
+    })
+}
 
-button.addEventListener('click',(e)=>{
-    e.preventDefault;
-    let rand = Math.floor(Math.random()*141);
-    displayName.textContent = colorNames[rand].toUpperCase();
-    displayName.style.color = colorNames[Math.floor(Math.random()*141)];
-    body.style.backgroundColor = colorNames[rand];
-    button.style.borderColor = colorNames[rand];
-})
+const hexButton = document.querySelector('.hex-btn');
+if(hexButton != null){
+    hexButton.addEventListener('click',(e)=>{
+        e.preventDefault; 
+        let rand = randomHexColor();
+        displayName.textContent = rand;
+        displayName.style.color = rand;
+        body.style.backgroundColor = rand;
+    })
+}
+
+function randomHexColor(){
+    const hexString = "0123456789ABCDEF";
+    let color = "#";
+    for(let i = 0; i < 6 ; i++){
+        let random = Math.floor(Math.random()*16)
+        color += hexString[random];
+    }
+    return color
+}
 
 /* Auto color change
 setInterval((e)=>{
