@@ -1,0 +1,101 @@
+/* 
+Review slider styles
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    background-image: url('./mounts.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    display: flex;
+    background-color: #dfdfdfab;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #444;
+}
+.profile-image{
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff66;
+    position: absolute;
+    top: -75px;
+    left: calc(50% - 75px);
+}
+
+.card{
+    width: 600px;
+    text-align: center;
+    justify-content: center;
+    padding: 95px 20px 20px;
+    border-radius: 5px;
+    background-color: #dfdfdf3b;
+    position: relative;
+    backdrop-filter: blur(10px);
+    color: #ffffffef;
+    box-shadow: 5px 5px 5px #444;
+}
+.name {
+    margin-bottom: 10px;
+}
+.content {
+    margin-bottom: 10px;
+}
+.button-group {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(100vh - 70px);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
